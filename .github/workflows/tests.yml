@@ -1,0 +1,24 @@
+name: CI Tests
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+        matrix:
+          version: ['2.x', '3.x']
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ matrix.version }}
+          channel: 'stable'
+          cache: true
+          cache-key: 'flutter-:os:-:channel:-:version:-:arch:-:hash:'
+          cache-path: '${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:'
+
+      - run: flutter pub get
+      - run: melos bootstrap
+      - run: melos exec --diff=$(git log --skip=1 -n 1 --pretty=format:"%H") -- flutter test
