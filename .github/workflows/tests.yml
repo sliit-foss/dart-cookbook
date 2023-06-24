@@ -17,5 +17,5 @@ jobs:
           cache-path: '${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:'
 
       - run: flutter pub get
-      - run: melos bootstrap
-      - run: melos exec --diff=$(git log --skip=1 -n 1 --pretty=format:"%H") -- flutter test
+      - run: flutter pub global run melos bootstrap
+      - run: flutter pub global run melos exec --diff=$(git log --skip=1 -n 1 --pretty=format:"%H") -- flutter test
