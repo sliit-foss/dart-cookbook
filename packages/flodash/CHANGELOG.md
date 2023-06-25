@@ -1,3 +1,8 @@
+## 1.1.0-blizzard.2
+
+ - **FEAT**: array/compact generic support.
+ - **FEAT**: added generics.
+
 ## 1.1.0-blizzard.1
 
  - **FEAT**: array/compact generic support.
