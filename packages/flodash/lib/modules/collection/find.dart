@@ -7,7 +7,10 @@ import '../../_utils/_array.dart';
 ///
 /// Returns
 /// (T?): Returns the matched element, else null.
-T? find<T>(List<T> list, dynamic iteratee) {
-  return list.firstWhere((element) => evaluatePredicate(iteratee, element),
-      orElse: () => null);
+T? find<T>(List<T?> list, dynamic iteratee) {
+  try {
+    return list.firstWhere((element) => evaluatePredicate(iteratee, element));
+  } catch (_) {
+    return null;
+  }
 }
