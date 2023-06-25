@@ -58,7 +58,7 @@ runs:
       shell: bash
 
     - name: Publish packages
-      run: melos publish --no-dry-run
+      run: melos publish --no-dry-run --yes
       shell: bash
 
     - name: Update release info
