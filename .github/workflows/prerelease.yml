@@ -6,8 +6,14 @@ on:
       - development
 
 jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/unit-tests
   prerelease:
     runs-on: ubuntu-latest
+    needs: unit-tests
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/release

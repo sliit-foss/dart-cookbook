@@ -1,0 +1,24 @@
+name: test
+description: Base unit test action
+runs:
+  using: composite
+  steps:
+    - name: Setup Flutter SDK
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: 3.x
+        channel: 'stable'
+        cache: true
+        cache-key: 'flutter-:os:-:channel:-:version:-:arch:-:hash:'
+        cache-path: '${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:'
+
+    - name: Install dependencies
+      run: |
+        dart pub global activate melos
+        flutter pub get
+        melos bootstrap
+      shell: bash
+
+    - name: Execute tests
+      run: melos exec --diff=$(git log --skip=1 -n 1 --pretty=format:"%H") -- flutter test
+      shell: bash
