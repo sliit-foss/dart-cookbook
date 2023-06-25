@@ -1,0 +1,16 @@
+name: CI Prerelease
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  prerelease:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/release
+        with:
+          credentials: ${{ secrets.PUB_CREDENTIALS }}
+          options: "--prerelease --preid=blizzard"
