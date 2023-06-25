@@ -57,6 +57,10 @@ runs:
         melos version --yes --message="CI: sync release" ${{ inputs.options }}
       shell: bash
 
+    - name: Publish packages
+      run: melos publish --no-dry-run
+      shell: bash
+
     - name: Update release info
       run: |
         git config pull.ff true
