@@ -40,7 +40,7 @@ runs:
         mkdir -p ~/.config
         cd ~/.config
         mkdir dart
-        echo "${{ inputs.credentials }}" > ~/.config/dart/pub-credentials.json
+        echo "${{ inputs.credentials }}" | base64 --decode > ~/.config/dart/pub-credentials.json
       shell: bash
 
     - name: Populate prerequisities
