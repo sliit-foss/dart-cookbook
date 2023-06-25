@@ -45,3 +45,4 @@ doc/api/
 
 packages/**/LICENSE
 packages/**/.pubignore
+packages/**/doc
