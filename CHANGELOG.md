@@ -15,6 +15,28 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`flodash` - `v1.1.0-blizzard.1`](#flodash---v110-blizzard1)
+
+---
+
+#### `flodash` - `v1.1.0-blizzard.1`
+
+ - **FEAT**: array/compact generic support.
+ - **FEAT**: added generics.
+
+
+## 2023-06-25
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`flodash` - `v1.1.0-blizzard.0`](#flodash---v110-blizzard0)
 
 ---
