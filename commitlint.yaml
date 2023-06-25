@@ -18,8 +18,3 @@ rules:
   type-empty:
     - 1
     - never    
-  scope-enum:
-    - 2
-    - always
-    - - flodash
-      - enhanced-http
