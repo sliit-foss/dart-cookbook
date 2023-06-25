@@ -3,3 +3,4 @@
 
 dart format . --fix
 dart run lint_staged
+git add .
