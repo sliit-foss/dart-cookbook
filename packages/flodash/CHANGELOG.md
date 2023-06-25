@@ -1,3 +1,7 @@
+## 1.1.0-blizzard.0
+
+ - **FEAT**: added generics.
+
 ## 1.0.3
 
 ## 1.0.2
