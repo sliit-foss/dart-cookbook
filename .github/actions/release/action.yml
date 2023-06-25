@@ -64,5 +64,5 @@ runs:
     - name: Update release info
       run: |
         git config pull.ff true
-        git pull --rebase && git push origin
+        git pull --rebase && git push origin --tags
       shell: bash
