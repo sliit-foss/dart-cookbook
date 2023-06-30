@@ -9,7 +9,7 @@
 /// - (string): The lowercase string.
 
 
-@Deprecated('The function toLower() is deprecated. Use the built-in toUpperCase() method instead.')
+@Deprecated('The function toLower() is deprecated. Use the built-in toLowerCase() method instead.')
 String toLower([String string = '']) {
   return string.toLowerCase();
 }
