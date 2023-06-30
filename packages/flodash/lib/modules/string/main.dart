@@ -11,5 +11,6 @@ export 'unescape.dart';
 export 'uppercase.dart';
 export 'trim_end.dart';
 export 'trim_start.dart';
+export 'starts_with.dart';
 export 'to_lower.dart';
 export 'to_upper.dart';
