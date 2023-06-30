@@ -11,7 +11,7 @@
 /// - (Boolean): Returns true if the string starts with the target string at the specified position; otherwise, returns false
 
 
-@Deprecated('The function toUpper() is deprecated. Use the built-in startsWith() method instead.')
+@Deprecated('The function startsWith() is deprecated. Use the built-in startsWith() method instead.')
 bool startsWith(String string, String target, [int position = 0]) {
   return string.startsWith(target, position);
 }
