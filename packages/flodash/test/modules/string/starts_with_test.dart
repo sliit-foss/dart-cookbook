@@ -2,19 +2,19 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flodash/flodash.dart' as flodash;
 
 void main() {
-  test('startsWith should return true if the string starts with the target', () {
+  test('should return true if the string starts with the target', () {
     String string = 'abc';
     String target = 'a';
     bool result = flodash.startsWith(string, target);
     expect(result, true);
   });
-  test('startsWith should return false if the string does not start with the target', () {
+  test('should return false if the string does not start with the target', () {
     String string = 'abc';
     String target = 'b';
     bool result = flodash.startsWith(string, target);
     expect(result, false);
   });
-  test('startsWith should return true if the string starts with the target at the specified position', () {
+  test('should return true if the string starts with the target at the specified position', () {
     String string = 'abc';
     String target = 'b';
     int position = 1;
