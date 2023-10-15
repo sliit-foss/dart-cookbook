@@ -1,3 +1,17 @@
+## 1.1.0-blizzard.3
+
+> Note: This release has breaking changes.
+
+ - **REFACTOR**: changes added.
+ - **REFACTOR**: changes added.
+ - **REFACTOR**: changes added.
+ - **REFACTOR**: changes added.
+ - **REFACTOR**: changes added.
+ - **FEAT**: added starts_with under the string manipulation.
+ - **FEAT**: added to_lower under the string manipulation.
+ - **FEAT**: added to_upper under the string manipulation.
+ - **BREAKING** **FEAT**: bumped firestore dependency versions.
+
 ## 1.1.0-blizzard.2
 
  - **FEAT**: array/compact generic support.
