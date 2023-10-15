@@ -11,6 +11,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`flodash` - `v1.1.0-blizzard.6`](#flodash---v110-blizzard6)
+
+---
+
+#### `flodash` - `v1.1.0-blizzard.6`
+
+ - **FEAT**: added number clamp.
+
+
+## 2023-10-15
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - [`enhanced_cloud_firestore` - `v2.0.0-blizzard.2`](#enhanced_cloud_firestore---v200-blizzard2)
  - [`flodash` - `v1.1.0-blizzard.5`](#flodash---v110-blizzard5)
 

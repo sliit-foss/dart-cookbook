@@ -1,3 +1,7 @@
+## 1.1.0-blizzard.6
+
+ - **FEAT**: added number clamp.
+
 ## 1.1.0-blizzard.5
 
 > Note: This release has breaking changes.
