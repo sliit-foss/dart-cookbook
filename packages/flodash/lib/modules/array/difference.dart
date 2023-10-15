@@ -1,7 +1,6 @@
-import 'package:flutter/foundation.dart';
-
 import 'flatten.dart';
 
+import '../../_utils/_general.dart';
 import '../../_utils/_varargs.dart';
 
 final difference = VarargsFunction((arguments) {
@@ -17,7 +16,7 @@ final difference = VarargsFunction((arguments) {
     if (e is Map) {
       return subList
           .whereType<Map>()
-          .where((m) => mapEquals(e, m))
+          .where((m) => e.toString() == m.toString())
           .toList()
           .isEmpty;
     }
