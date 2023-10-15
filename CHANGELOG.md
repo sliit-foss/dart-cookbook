@@ -11,6 +11,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`flodash` - `v1.2.0-blizzard.0`](#flodash---v120-blizzard0)
+
+---
+
+#### `flodash` - `v1.2.0-blizzard.0`
+
+ - **FEAT**: added flodash in range.
+
+
+## 2023-10-15
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - [`enhanced_cloud_firestore` - `v2.0.0`](#enhanced_cloud_firestore---v200)
 
 Packages with other changes:
