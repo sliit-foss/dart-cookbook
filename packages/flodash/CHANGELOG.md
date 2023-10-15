@@ -1,3 +1,20 @@
+## 1.1.0-blizzard.5
+
+> Note: This release has breaking changes.
+
+ - **REFACTOR**: changes added.
+ - **REFACTOR**: changes added.
+ - **REFACTOR**: changes added.
+ - **REFACTOR**: changes added.
+ - **REFACTOR**: changes added.
+ - **FIX**: removed flutter dependency from flodash.
+ - **FEAT**: added starts_with under the string manipulation.
+ - **FEAT**: added to_lower under the string manipulation.
+ - **FEAT**: added to_upper under the string manipulation.
+ - **FEAT**: array/compact generic support.
+ - **FEAT**: added generics.
+ - **BREAKING** **FEAT**: bumped firestore dependency versions.
+
 ## 1.1.0-blizzard.4
 
 > Note: This release has breaking changes.
