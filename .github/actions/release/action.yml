@@ -51,7 +51,7 @@ runs:
 
     - name: Bump versions
       run: |
-        melos version --yes --message="CI: sync release" ${{ inputs.options }}
+        melos version --yes --message="CI: sync release" --diff=$(git log --skip=1 -n 1 --pretty=format:"%H") ${{ inputs.options }}
       shell: bash
 
     - name: Publish packages

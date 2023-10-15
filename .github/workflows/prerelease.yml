@@ -32,4 +32,4 @@ jobs:
         uses: ./.github/actions/release
         with:
           credentials: ${{ secrets.PUB_CREDENTIALS }}
-          options: "--prerelease --preid=blizzard --diff=origin/development...HEAD"
+          options: "--prerelease --preid=blizzard"
