@@ -5,11 +5,6 @@ repository: https://github.com/sliit-foss/flodash
 
 environment:
   sdk: ">=2.12.0 <3.7.0"
-  flutter: ">=1.17.0"
-
-dependencies:
-  flutter:
-    sdk: flutter
 
 dev_dependencies:
   flutter_test:
