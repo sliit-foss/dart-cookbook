@@ -13,3 +13,5 @@ jobs:
 
       - name: Run Tests 🧪
         uses: ./.github/actions/test
+        with:
+          fetch-depth: 0

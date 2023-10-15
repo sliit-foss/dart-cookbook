@@ -25,9 +25,6 @@ runs:
         git config --global user.name "github-actions[bot]"
       shell: bash
 
-    - run: git fetch --prune --unshallow
-      shell: bash
-
     - name: Install dependencies
       run: |
         dart pub global activate melos
