@@ -20,6 +20,12 @@
    <a aria-label="License" href="https://github.com/invertase/melos">
     <img alt="" src="https://img.shields.io/badge/Maintained%20with-melos-f700ff.svg?style=flat-square">
   </a>
+  <a aria-label="CI Release" href="https://github.com/sliit-foss/dart-cookbook/actions/workflows/release.yml">
+    <img alt="" src="https://github.com/sliit-foss/dart-cookbook/actions/workflows/release.yml/badge.svg">
+  </a>
+  <a aria-label="CI Prerelease" href="https://github.com/sliit-foss/dart-cookbook/actions/workflows/prerelease.yml">
+    <img alt="" src="https://github.com/sliit-foss/dart-cookbook/actions/workflows/prerelease.yml/badge.svg">
+  </a>
 </p>
 
 <br/>

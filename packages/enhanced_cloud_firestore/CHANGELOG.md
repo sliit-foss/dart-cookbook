@@ -1,3 +1,7 @@
+## 2.0.0
+
+ - Graduate package to a stable release. See pre-releases prior to this version for changelog entries.
+
 ## 2.0.0-blizzard.3
 
  - **FIX**: static analysis issues.

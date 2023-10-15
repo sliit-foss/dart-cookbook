@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Run Tests 🧪
-        uses: ./.github/actions/unit-tests
+        uses: ./.github/actions/test
   
   release:
     name: Release packages
