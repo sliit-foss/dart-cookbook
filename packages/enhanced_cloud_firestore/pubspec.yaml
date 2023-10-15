@@ -1,6 +1,6 @@
 name: enhanced_cloud_firestore
 description: A wrapper around the cloud firestore dart package with support for filtering sorting, limiting, error handling, and success scenarios
-version: 2.0.0-blizzard.0
+version: 2.0.0-blizzard.1
 repository: https://github.com/sliit-foss/enchanced_cloud_firestore
 
 environment:
