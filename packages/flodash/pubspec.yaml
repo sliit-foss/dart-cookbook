@@ -1,6 +1,6 @@
 name: flodash
 description: A dart implementation of the popular JavaScript library Lodash
-version: 1.1.0-blizzard.6
+version: 1.1.0-blizzard.7
 repository: https://github.com/sliit-foss/flodash
 
 environment:

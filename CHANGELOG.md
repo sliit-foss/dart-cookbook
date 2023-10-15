@@ -15,6 +15,32 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`enhanced_cloud_firestore` - `v2.0.0-blizzard.3`](#enhanced_cloud_firestore---v200-blizzard3)
+ - [`flodash` - `v1.1.0-blizzard.7`](#flodash---v110-blizzard7)
+
+---
+
+#### `enhanced_cloud_firestore` - `v2.0.0-blizzard.3`
+
+ - **FIX**: static analysis issues.
+
+#### `flodash` - `v1.1.0-blizzard.7`
+
+ - **FIX**: static analysis issues.
+
+
+## 2023-10-15
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`flodash` - `v1.1.0-blizzard.6`](#flodash---v110-blizzard6)
 
 ---

@@ -1,3 +1,7 @@
+## 1.1.0-blizzard.7
+
+ - **FIX**: static analysis issues.
+
 ## 1.1.0-blizzard.6
 
  - **FEAT**: added number clamp.
