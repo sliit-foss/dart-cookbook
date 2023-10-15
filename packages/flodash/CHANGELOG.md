@@ -1,3 +1,7 @@
+## 1.1.0
+
+ - Graduate package to a stable release. See pre-releases prior to this version for changelog entries.
+
 ## 1.1.0-blizzard.6
 
  - **FEAT**: added number clamp.

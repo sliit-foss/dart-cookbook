@@ -11,6 +11,32 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - [`enhanced_cloud_firestore` - `v2.0.0`](#enhanced_cloud_firestore---v200)
+
+Packages with other changes:
+
+ - [`flodash` - `v1.1.0`](#flodash---v110)
+
+Packages graduated to a stable release (see pre-releases prior to the stable version for changelog entries):
+
+ - `enhanced_cloud_firestore` - `v2.0.0`
+ - `flodash` - `v1.1.0`
+
+---
+
+#### `enhanced_cloud_firestore` - `v2.0.0`
+
+#### `flodash` - `v1.1.0`
+
+
+## 2023-10-15
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - There are no breaking changes in this release.
 
 Packages with other changes:
