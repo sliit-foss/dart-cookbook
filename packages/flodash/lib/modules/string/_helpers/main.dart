@@ -16,13 +16,6 @@ final reEscape = RegExp(r"<%-([\s\S]+?)%>"),
     reEvaluate = RegExp(r"<%([\s\S]+?)%>"),
     reInterpolate = RegExp(r"<%=([\s\S]+?)%>");
 
-/// Used to match property names within property paths.
-final reIsDeepProp =
-        RegExp(r"\.|\[(?:[^[\]]*|([" "\"'])(?:(?!\1)[^\\]|\\.)*?\1)\]"),
-    reIsPlainProp = RegExp(r"^\w*$"),
-    rePropName = RegExp(r'\[^[.\[\]]+\]|\[(?:(-?\d+(?:\.\d+)?)|(["'
-        '\'])(?:(?!\2)[^\\]|\\.)*?\2)\]|\.(?!\.|\$)|\[\]');
-
 /// Used to match `RegExp`
 final reRegExpChar = RegExp(r"[\\^$.*+?()[\]{}|]"),
     reHasRegExpChar = RegExp(reRegExpChar.pattern);

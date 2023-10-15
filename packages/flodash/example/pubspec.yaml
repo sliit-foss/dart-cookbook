@@ -1,0 +1,18 @@
+name: flodash_example
+description: An example project which implements the flodash package
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: 1.0.2
+  flodash:
+    path: ../
+
+flutter:
+  uses-material-design: true

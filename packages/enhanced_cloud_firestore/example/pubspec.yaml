@@ -1,5 +1,6 @@
 name: example
 description: An example project which implements the enhanced_cloud_firestore package
+publish_to: none
 
 version: 1.0.0+1
 

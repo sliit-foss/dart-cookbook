@@ -49,6 +49,13 @@ runs:
         done
       shell: bash
 
+    - name: Sync stable versions from main
+      run: |
+        if [[ "${{ inputs.options }}" == *"prerelease"* ]]; then
+          git merge origin/main --no-edit || true
+        fi
+      shell: bash
+
     - name: Bump versions
       run: |
         melos version --yes --message="CI: sync release" --diff=$(git log --skip=1 -n 1 --pretty=format:"%H") ${{ inputs.options }}
@@ -62,5 +69,5 @@ runs:
       run: |
         git add . && git commit --amend --no-edit || true
         git config pull.ff true
-        git pull --rebase && git push origin
+        git pull --rebase && git push origin --follow-tags
       shell: bash

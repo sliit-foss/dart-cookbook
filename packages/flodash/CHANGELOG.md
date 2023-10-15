@@ -1,6 +1,14 @@
+## 1.2.0-blizzard.0
+
+ - **FEAT**: added flodash in range.
+
 ## 1.1.0
 
  - Graduate package to a stable release. See pre-releases prior to this version for changelog entries.
+
+## 1.1.0-blizzard.7
+
+ - **FIX**: static analysis issues.
 
 ## 1.1.0-blizzard.6
 
