@@ -52,7 +52,7 @@ runs:
     - name: Sync stable versions from main
       run: |
         if [[ ${{ inputs.options }} == *"prerelease"* ]]; then
-          git merge origin/main --no-edit --strategy-option theirs
+          git merge origin/main --no-edit || true
         fi
       shell: bash
 
