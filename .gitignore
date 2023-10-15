@@ -42,3 +42,7 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+packages/**/LICENSE
+packages/**/.pubignore
+packages/**/doc

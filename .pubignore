@@ -5,3 +5,6 @@ test/
 .gitignore
 analysis_options.yaml
 pub_login.sh
+melos_flodash.iml
+CHANGELOG.md
+CONTRIBUTING.md

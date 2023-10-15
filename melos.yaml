@@ -6,3 +6,8 @@ packages:
 scripts:
   test:
     exec: flutter test
+
+command:
+  version:
+    hooks:
+      post: melos exec --no-published -- dart doc . 

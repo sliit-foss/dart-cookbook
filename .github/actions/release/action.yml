@@ -1,0 +1,66 @@
+name: release
+description: Base package release action
+inputs:
+  credentials:
+    description: 'Pub.dev credentials'
+    required: true
+  options:
+    description: 'Melos version options'
+    required: false
+runs:
+  using: composite
+  steps:
+    - name: Setup Flutter SDK
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: 3.x
+        channel: 'stable'
+        cache: true
+        cache-key: 'flutter-:os:-:channel:-:version:-:arch:-:hash:'
+        cache-path: '${{ runner.tool_cache }}/flutter/:channel:-:version:-:arch:'
+
+    - name: Configure git
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+      shell: bash
+
+    - name: Install dependencies
+      run: |
+        dart pub global activate melos
+        flutter pub get
+        melos bootstrap
+      shell: bash
+
+    - name: Setup Pub Credentials
+      run: |
+        mkdir -p ~/.config
+        cd ~/.config
+        mkdir dart
+        echo "${{ inputs.credentials }}" | base64 --decode > ~/.config/dart/pub-credentials.json
+      shell: bash
+
+    - name: Populate prerequisities
+      run: |
+        for dir in packages; do
+          cd "$dir" && for p in */; do
+            cp ../{.pubignore,LICENSE} "$p"
+          done && cd ..
+        done
+      shell: bash
+
+    - name: Bump versions
+      run: |
+        melos version --yes --message="CI: sync release" --diff=$(git log --skip=1 -n 1 --pretty=format:"%H") ${{ inputs.options }}
+      shell: bash
+
+    - name: Publish packages
+      run: melos publish --no-published --no-dry-run --yes
+      shell: bash
+
+    - name: Update release info
+      run: |
+        git add . && git commit --amend --no-edit || true
+        git config pull.ff true
+        git pull --rebase && git push origin
+      shell: bash
