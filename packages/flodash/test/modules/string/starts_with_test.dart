@@ -14,7 +14,9 @@ void main() {
     bool result = flodash.startsWith(string, target);
     expect(result, false);
   });
-  test('should return true if the string starts with the target at the specified position', () {
+  test(
+      'should return true if the string starts with the target at the specified position',
+      () {
     String string = 'abc';
     String target = 'b';
     int position = 1;

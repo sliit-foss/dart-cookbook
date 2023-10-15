@@ -8,13 +8,17 @@ void main() {
     String result = flodash.toUpper(input);
     expect(result, expected);
   });
-  test('should convert the string to upper case when it contains both lowercase and uppercase characters', () {
+  test(
+      'should convert the string to upper case when it contains both lowercase and uppercase characters',
+      () {
     String input = 'fooBar';
     String expected = 'FOOBAR';
     String result = flodash.toUpper(input);
     expect(result, expected);
   });
-  test('should convert the string to upper case while preserving special characters', () {
+  test(
+      'should convert the string to upper case while preserving special characters',
+      () {
     String input = '__foo_bar__';
     String expected = '__FOO_BAR__';
     String result = flodash.toUpper(input);
