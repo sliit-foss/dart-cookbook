@@ -8,5 +8,8 @@ jobs:
     name: Run Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/test
+      - name: Checkout repository 🛎️
+        uses: actions/checkout@v4
+
+      - name: Run Tests 🧪
+        uses: ./.github/actions/test
