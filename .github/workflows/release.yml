@@ -21,3 +21,4 @@ jobs:
       - uses: ./.github/actions/release
         with:
           credentials: ${{ secrets.PUB_CREDENTIALS }}
+          options: "--graduate"
