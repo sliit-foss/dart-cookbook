@@ -11,6 +11,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - [`enhanced_http` - `v4.1.1`](#enhanced_http---v411)
+
+Packages with other changes:
+
+ - There are no other changes in this release.
+
+Packages graduated to a stable release (see pre-releases prior to the stable version for changelog entries):
+
+ - `enhanced_http` - `v4.1.1`
+
+---
+
+#### `enhanced_http` - `v4.1.1`
+
+
+## 2023-11-09
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - There are no breaking changes in this release.
 
 Packages with other changes:
