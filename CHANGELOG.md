@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-11-09
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`enhanced_http` - `v4.1.1-blizzard.0`](#enhanced_http---v411-blizzard0)
+
+---
+
+#### `enhanced_http` - `v4.1.1-blizzard.0`
+
+ - **FIX**(enhanced-http): fix casing issue in generated docs.
+
+
 ## 2023-10-15
 
 ### Changes
