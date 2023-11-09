@@ -27,8 +27,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
     return await request(() async {
       final url = Uri.parse('$baseURL$path');
       if (isStream(headers, responseType)) {
-        return await streamedRequest(
-            'GET', url, mergeHeaders(this.headers, headers),
+        return await streamed('GET', url, mergeHeaders(this.headers, headers),
             responseType: responseType);
       }
       return await http.get(
@@ -47,8 +46,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
     final url = Uri.parse('$baseURL$path');
     return await request(() async {
       if (isStream(headers, responseType)) {
-        return await streamedRequest(
-            'POST', url, mergeHeaders(this.headers, headers),
+        return await streamed('POST', url, mergeHeaders(this.headers, headers),
             payload: payload, files: files, responseType: responseType);
       }
       return await http.post(
@@ -64,8 +62,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
     final url = Uri.parse('$baseURL$path');
     return await request(() async {
       if (isStream(headers, responseType)) {
-        return await streamedRequest(
-            method, url, mergeHeaders(this.headers, headers),
+        return await streamed(method, url, mergeHeaders(this.headers, headers),
             payload: payload, files: files, responseType: responseType);
       } else {
         payload ??= {};
@@ -112,7 +109,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
     return await request(() async {
       final url = Uri.parse('$baseURL$path');
       if (isStream(headers, responseType)) {
-        return await streamedRequest(
+        return await streamed(
             'DELETE', url, mergeHeaders(this.headers, headers),
             responseType: responseType);
       }
