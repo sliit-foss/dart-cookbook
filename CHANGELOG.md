@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-10-18
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`enhanced_http` - `v4.2.0`](#enhanced_http---v420)
+
+---
+
+#### `enhanced_http` - `v4.2.0`
+
+ - **FEAT**(enhanced-http): improved interceptors.
+
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## 2023-11-09
 
 ### Changes
