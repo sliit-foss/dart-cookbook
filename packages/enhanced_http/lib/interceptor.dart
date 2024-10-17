@@ -4,6 +4,7 @@ import 'package:enhanced_http/http_error.dart';
 class InterceptorOptions {
   Function(dynamic res)? response;
   Function(dynamic e)? error;
+  Function()? headers;
 
   InterceptorOptions({this.response, this.error});
 }
@@ -14,7 +15,11 @@ class Interceptor {
   String? defaultErrorMessage;
 
   Future<dynamic> request(
-      Function request, InterceptorOptions? _interceptors) async {
+    Function request,
+    Uri url,
+    Map<String, String>? options,
+    InterceptorOptions? _interceptors,
+  ) async {
     _interceptors = InterceptorOptions(
         response: interceptors?.response ?? _interceptors?.response,
         error: interceptors?.error ?? _interceptors?.error);
@@ -31,9 +36,11 @@ class Interceptor {
         }
       }
       final decoded = {
+        "url": url,
         "status": response.statusCode,
         "data": data,
-        "headers": response.headers
+        "headers": response.headers,
+        "options": options,
       };
       if (response.statusCode >= 200 && response.statusCode <= 299) {
         if (_interceptors.response != null) {

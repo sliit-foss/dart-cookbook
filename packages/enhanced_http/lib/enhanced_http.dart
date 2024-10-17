@@ -23,18 +23,24 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
   Future<dynamic> get(String path,
       {Map<String, String>? headers,
       InterceptorOptions? interceptors,
-      String? responseType}) async {
+      String? responseType,
+      Map<String, String>? options}) async {
+    final url = Uri.parse('$baseURL$path');
     return await request(() async {
-      final url = Uri.parse('$baseURL$path');
       if (isStream(headers, responseType)) {
-        return await streamed('GET', url, mergeHeaders(this.headers, headers),
+        return await streamed(
+            'GET',
+            url,
+            mergeHeaders(
+                this.headers, headers, this.interceptors!.headers?.call()),
             responseType: responseType);
       }
       return await http.get(
         url,
-        headers: mergeHeaders(this.headers, headers),
+        headers: mergeHeaders(
+            this.headers, headers, this.interceptors!.headers?.call()),
       );
-    }, interceptors);
+    }, url, options, interceptors);
   }
 
   Future<dynamic> post(String path,
@@ -42,44 +48,60 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
       Map<String, String>? headers,
       InterceptorOptions? interceptors,
       List<dynamic>? files,
-      String? responseType}) async {
+      String? responseType,
+      Map<String, String>? options}) async {
     final url = Uri.parse('$baseURL$path');
     return await request(() async {
       if (isStream(headers, responseType)) {
-        return await streamed('POST', url, mergeHeaders(this.headers, headers),
-            payload: payload, files: files, responseType: responseType);
+        return await streamed(
+            'POST',
+            url,
+            mergeHeaders(
+                this.headers, headers, this.interceptors!.headers?.call()),
+            payload: payload,
+            files: files,
+            responseType: responseType);
       }
       return await http.post(
         url,
-        headers: mergeHeaders(this.headers, headers),
+        headers: mergeHeaders(
+            this.headers, headers, this.interceptors!.headers?.call()),
         body: payload == null ? {} : jsonEncode(payload),
       );
-    }, interceptors);
+    }, url, options, interceptors);
   }
 
   Future<dynamic> _update(String method, String path, payload, headers,
-      interceptors, files, responseType) async {
+      interceptors, files, responseType, options) async {
     final url = Uri.parse('$baseURL$path');
     return await request(() async {
       if (isStream(headers, responseType)) {
-        return await streamed(method, url, mergeHeaders(this.headers, headers),
-            payload: payload, files: files, responseType: responseType);
+        return await streamed(
+            method,
+            url,
+            mergeHeaders(
+                this.headers, headers, this.interceptors!.headers?.call()),
+            payload: payload,
+            files: files,
+            responseType: responseType);
       } else {
         payload ??= {};
         if (method == "PUT") {
           return await http.put(
             url,
-            headers: mergeHeaders(this.headers, headers),
+            headers: mergeHeaders(
+                this.headers, headers, this.interceptors!.headers?.call()),
             body: jsonEncode(payload),
           );
         }
         return await http.patch(
           url,
-          headers: mergeHeaders(this.headers, headers),
+          headers: mergeHeaders(
+              this.headers, headers, this.interceptors!.headers?.call()),
           body: jsonEncode(payload),
         );
       }
-    }, interceptors);
+    }, url, options, interceptors);
   }
 
   Future<dynamic> put(String path,
@@ -87,9 +109,10 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
       Map<String, String>? headers,
       InterceptorOptions? interceptors,
       List<dynamic>? files,
-      String? responseType}) async {
-    return _update(
-        "PUT", path, payload, headers, interceptors, files, responseType);
+      String? responseType,
+      Map<String, String>? options}) async {
+    return _update("PUT", path, payload, headers, interceptors, files,
+        responseType, options);
   }
 
   Future<dynamic> patch(String path,
@@ -97,38 +120,47 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
       Map<String, String>? headers,
       InterceptorOptions? interceptors,
       List<dynamic>? files,
-      String? responseType}) async {
-    return _update(
-        "PATCH", path, payload, headers, interceptors, files, responseType);
+      String? responseType,
+      Map<String, String>? options}) async {
+    return _update("PATCH", path, payload, headers, interceptors, files,
+        responseType, options);
   }
 
   Future<dynamic> delete(String path,
       {Map<String, String>? headers,
       InterceptorOptions? interceptors,
-      String? responseType}) async {
+      String? responseType,
+      Map<String, String>? options}) async {
+    final url = Uri.parse('$baseURL$path');
     return await request(() async {
-      final url = Uri.parse('$baseURL$path');
       if (isStream(headers, responseType)) {
         return await streamed(
-            'DELETE', url, mergeHeaders(this.headers, headers),
+            'DELETE',
+            url,
+            mergeHeaders(
+                this.headers, headers, this.interceptors!.headers?.call()),
             responseType: responseType);
       }
       return await http.delete(
         url,
-        headers: mergeHeaders(this.headers, headers),
+        headers: mergeHeaders(
+            this.headers, headers, this.interceptors!.headers?.call()),
       );
-    }, interceptors);
+    }, url, options, interceptors);
   }
 
   Future<dynamic> head(String path,
       {Map<String, String>? headers,
       InterceptorOptions? interceptors,
-      String? responseType}) async {
+      String? responseType,
+      Map<String, String>? options}) async {
+    final url = Uri.parse('$baseURL$path');
     return await request(() async {
       return await http.head(
-        Uri.parse('$baseURL$path'),
-        headers: mergeHeaders(this.headers, headers),
+        url,
+        headers: mergeHeaders(
+            this.headers, headers, this.interceptors!.headers?.call()),
       );
-    }, interceptors);
+    }, url, options, interceptors);
   }
 }
