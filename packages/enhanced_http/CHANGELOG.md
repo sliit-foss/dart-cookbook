@@ -1,3 +1,7 @@
+## 4.2.1
+
+ - **FIX**(enhanced-http): issue in header interceptor.
+
 ## 4.2.0
 
  - **FEAT**(enhanced-http): improved interceptors.
