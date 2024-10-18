@@ -17,7 +17,7 @@ class Interceptor {
   Future<dynamic> request(
     Function request,
     Uri url,
-    Map<String, String>? options,
+    Map<String, dynamic>? options,
     InterceptorOptions? _interceptors,
   ) async {
     _interceptors = InterceptorOptions(

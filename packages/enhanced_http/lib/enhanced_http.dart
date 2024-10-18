@@ -24,7 +24,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
       {Map<String, String>? headers,
       InterceptorOptions? interceptors,
       String? responseType,
-      Map<String, String>? options}) async {
+      Map<String, dynamic>? options}) async {
     final url = Uri.parse('$baseURL$path');
     return await request(() async {
       if (isStream(headers, responseType)) {
@@ -49,7 +49,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
       InterceptorOptions? interceptors,
       List<dynamic>? files,
       String? responseType,
-      Map<String, String>? options}) async {
+      Map<String, dynamic>? options}) async {
     final url = Uri.parse('$baseURL$path');
     return await request(() async {
       if (isStream(headers, responseType)) {
@@ -110,7 +110,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
       InterceptorOptions? interceptors,
       List<dynamic>? files,
       String? responseType,
-      Map<String, String>? options}) async {
+      Map<String, dynamic>? options}) async {
     return _update("PUT", path, payload, headers, interceptors, files,
         responseType, options);
   }
@@ -121,7 +121,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
       InterceptorOptions? interceptors,
       List<dynamic>? files,
       String? responseType,
-      Map<String, String>? options}) async {
+      Map<String, dynamic>? options}) async {
     return _update("PATCH", path, payload, headers, interceptors, files,
         responseType, options);
   }
@@ -130,7 +130,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
       {Map<String, String>? headers,
       InterceptorOptions? interceptors,
       String? responseType,
-      Map<String, String>? options}) async {
+      Map<String, dynamic>? options}) async {
     final url = Uri.parse('$baseURL$path');
     return await request(() async {
       if (isStream(headers, responseType)) {
@@ -153,7 +153,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
       {Map<String, String>? headers,
       InterceptorOptions? interceptors,
       String? responseType,
-      Map<String, String>? options}) async {
+      Map<String, dynamic>? options}) async {
     final url = Uri.parse('$baseURL$path');
     return await request(() async {
       return await http.head(
