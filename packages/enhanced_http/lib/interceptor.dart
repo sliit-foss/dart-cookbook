@@ -6,7 +6,7 @@ class InterceptorOptions {
   Function(dynamic e)? error;
   Future<Map<String, String>> Function()? headers;
 
-  InterceptorOptions({this.response, this.error});
+  InterceptorOptions({this.response, this.error, this.headers});
 }
 
 class Interceptor {
