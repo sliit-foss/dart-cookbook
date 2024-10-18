@@ -4,7 +4,7 @@ import 'package:enhanced_http/http_error.dart';
 class InterceptorOptions {
   Function(dynamic res)? response;
   Function(dynamic e)? error;
-  Function()? headers;
+  Future<Map<String, String>> Function()? headers;
 
   InterceptorOptions({this.response, this.error});
 }

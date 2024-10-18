@@ -31,14 +31,14 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
         return await streamed(
             'GET',
             url,
-            mergeHeaders(
-                this.headers, headers, this.interceptors!.headers?.call()),
+            mergeHeaders(this.headers, headers,
+                await this.interceptors!.headers?.call()),
             responseType: responseType);
       }
       return await http.get(
         url,
         headers: mergeHeaders(
-            this.headers, headers, this.interceptors!.headers?.call()),
+            this.headers, headers, await this.interceptors!.headers?.call()),
       );
     }, url, options, interceptors);
   }
@@ -56,8 +56,8 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
         return await streamed(
             'POST',
             url,
-            mergeHeaders(
-                this.headers, headers, this.interceptors!.headers?.call()),
+            mergeHeaders(this.headers, headers,
+                await this.interceptors!.headers?.call()),
             payload: payload,
             files: files,
             responseType: responseType);
@@ -65,7 +65,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
       return await http.post(
         url,
         headers: mergeHeaders(
-            this.headers, headers, this.interceptors!.headers?.call()),
+            this.headers, headers, await this.interceptors!.headers?.call()),
         body: payload == null ? {} : jsonEncode(payload),
       );
     }, url, options, interceptors);
@@ -79,8 +79,8 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
         return await streamed(
             method,
             url,
-            mergeHeaders(
-                this.headers, headers, this.interceptors!.headers?.call()),
+            mergeHeaders(this.headers, headers,
+                await this.interceptors!.headers?.call()),
             payload: payload,
             files: files,
             responseType: responseType);
@@ -89,15 +89,15 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
         if (method == "PUT") {
           return await http.put(
             url,
-            headers: mergeHeaders(
-                this.headers, headers, this.interceptors!.headers?.call()),
+            headers: mergeHeaders(this.headers, headers,
+                await this.interceptors!.headers?.call()),
             body: jsonEncode(payload),
           );
         }
         return await http.patch(
           url,
           headers: mergeHeaders(
-              this.headers, headers, this.interceptors!.headers?.call()),
+              this.headers, headers, await this.interceptors!.headers?.call()),
           body: jsonEncode(payload),
         );
       }
@@ -137,14 +137,14 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
         return await streamed(
             'DELETE',
             url,
-            mergeHeaders(
-                this.headers, headers, this.interceptors!.headers?.call()),
+            mergeHeaders(this.headers, headers,
+                await this.interceptors!.headers?.call()),
             responseType: responseType);
       }
       return await http.delete(
         url,
         headers: mergeHeaders(
-            this.headers, headers, this.interceptors!.headers?.call()),
+            this.headers, headers, await this.interceptors!.headers?.call()),
       );
     }, url, options, interceptors);
   }
@@ -159,7 +159,7 @@ class EnhancedHttp extends StreamedRequest with Interceptor, Utils {
       return await http.head(
         url,
         headers: mergeHeaders(
-            this.headers, headers, this.interceptors!.headers?.call()),
+            this.headers, headers, await this.interceptors!.headers?.call()),
       );
     }, url, options, interceptors);
   }
