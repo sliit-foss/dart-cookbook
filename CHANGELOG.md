@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`enhanced_http` - `v4.2.2`](#enhanced_http---v422)
+
+---
+
+#### `enhanced_http` - `v4.2.2`
+
+ - **FIX**(enhanced-http): header intercepts.
+
+
+## 2024-10-18
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`enhanced_http` - `v4.2.1`](#enhanced_http---v421)
 
 ---

@@ -1,3 +1,7 @@
+## 4.2.2
+
+ - **FIX**(enhanced-http): header intercepts.
+
 ## 4.2.1
 
  - **FIX**(enhanced-http): issue in header interceptor.
