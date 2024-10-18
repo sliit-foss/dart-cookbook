@@ -1,3 +1,7 @@
+## 4.2.3
+
+ - **FIX**(enhanced-http): method options.
+
 ## 4.2.2
 
  - **FIX**(enhanced-http): header intercepts.
