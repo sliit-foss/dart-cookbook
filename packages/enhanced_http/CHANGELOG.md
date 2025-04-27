@@ -1,3 +1,7 @@
+## 4.2.5
+
+ - **FIX**(enhanced-http): static analysis warning.
+
 ## 4.2.4
 
  - **FIX**: increased upper bound of dart sdk contraint.

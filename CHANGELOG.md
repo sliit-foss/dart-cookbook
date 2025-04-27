@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`enhanced_http` - `v4.2.5`](#enhanced_http---v425)
+
+---
+
+#### `enhanced_http` - `v4.2.5`
+
+ - **FIX**(enhanced-http): static analysis warning.
+
+
+## 2025-04-27
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`enhanced_cloud_firestore` - `v2.0.1`](#enhanced_cloud_firestore---v201)
  - [`enhanced_http` - `v4.2.4`](#enhanced_http---v424)
  - [`flodash` - `v1.2.1`](#flodash---v121)
