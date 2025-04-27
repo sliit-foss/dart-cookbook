@@ -68,6 +68,7 @@ runs:
     - name: Update release info
       run: |
         git add . && git commit --amend --no-edit || true
-        git config pull.ff true
-        git pull --rebase && git push origin --follow-tags
+        git config pull.ff true 
+        git pull --rebase || true
+        git push origin --follow-tags
       shell: bash
