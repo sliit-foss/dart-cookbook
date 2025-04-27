@@ -1,3 +1,7 @@
+## 1.2.1
+
+ - **FIX**: increased upper bound of dart sdk contraint.
+
 ## 1.2.0
 
  - Graduate package to a stable release. See pre-releases prior to this version for changelog entries.

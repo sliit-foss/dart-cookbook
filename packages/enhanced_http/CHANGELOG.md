@@ -1,3 +1,7 @@
+## 4.2.4
+
+ - **FIX**: increased upper bound of dart sdk contraint.
+
 ## 4.2.3
 
  - **FIX**(enhanced-http): method options.

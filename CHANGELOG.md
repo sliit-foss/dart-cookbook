@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2025-04-27
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`enhanced_cloud_firestore` - `v2.0.1`](#enhanced_cloud_firestore---v201)
+ - [`enhanced_http` - `v4.2.4`](#enhanced_http---v424)
+ - [`flodash` - `v1.2.1`](#flodash---v121)
+
+---
+
+#### `enhanced_cloud_firestore` - `v2.0.1`
+
+ - **FIX**: increased upper bound of dart sdk contraint.
+
+#### `enhanced_http` - `v4.2.4`
+
+ - **FIX**: increased upper bound of dart sdk contraint.
+
+#### `flodash` - `v1.2.1`
+
+ - **FIX**: increased upper bound of dart sdk contraint.
+
+
 ## 2024-10-18
 
 ### Changes
