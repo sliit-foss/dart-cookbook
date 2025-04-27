@@ -1,3 +1,7 @@
+## 4.3.0
+
+ - **FEAT**(flodash): improved type safety and documented a few functions.
+
 ## 4.2.5
 
  - **FIX**(enhanced-http): static analysis warning.

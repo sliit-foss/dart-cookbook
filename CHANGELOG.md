@@ -15,6 +15,37 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`enhanced_cloud_firestore` - `v2.1.0`](#enhanced_cloud_firestore---v210)
+ - [`enhanced_http` - `v4.3.0`](#enhanced_http---v430)
+ - [`flodash` - `v1.3.0`](#flodash---v130)
+
+---
+
+#### `enhanced_cloud_firestore` - `v2.1.0`
+
+ - **FEAT**(flodash): improved type safety and documented a few functions.
+
+#### `enhanced_http` - `v4.3.0`
+
+ - **FEAT**(flodash): improved type safety and documented a few functions.
+
+#### `flodash` - `v1.3.0`
+
+ - **FEAT**(flodash): improved type safety and documented a few functions.
+
+
+## 2025-04-27
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`enhanced_http` - `v4.2.5`](#enhanced_http---v425)
 
 ---

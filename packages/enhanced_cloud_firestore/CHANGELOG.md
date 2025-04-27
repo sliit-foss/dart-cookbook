@@ -1,3 +1,7 @@
+## 2.1.0
+
+ - **FEAT**(flodash): improved type safety and documented a few functions.
+
 ## 2.0.1
 
  - **FIX**: increased upper bound of dart sdk contraint.
