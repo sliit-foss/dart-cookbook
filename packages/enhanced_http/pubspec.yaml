@@ -1,10 +1,10 @@
 name: enhanced_http
 description: A wrapper around the dart http package provided by Google which is inspired by axios
 version: 4.2.3
-repository: https://github.com/sliit-foss/enhanced_http
+repository: https://github.com/sliit-foss/dart-cookbook/tree/main/packages/enhanced_http
 
 environment:
-  sdk: ">=2.12.0 <3.7.0"
+  sdk: ">=2.12.0 <=3.7.2"
 
 dependencies:
   http: ^1.0.0

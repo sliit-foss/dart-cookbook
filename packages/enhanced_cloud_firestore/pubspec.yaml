@@ -4,7 +4,7 @@ version: 2.0.0
 repository: https://github.com/sliit-foss/enchanced_cloud_firestore
 
 environment:
-  sdk: ">=2.12.0 <3.7.0"
+  sdk: ">=2.12.0 <=3.7.2"
   flutter: ">=1.17.0"
 
 dependencies:
